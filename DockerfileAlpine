@@ -1,0 +1,4 @@
+# For installing docker muse converter
+FROM alpine:latest
+RUN apk add --no-cache texlive-full perl-app-cpanminus gcc g++ make git patch perl perl-dev curl wget
+RUN cpanm Text::Amuse::Compile Text::Amuse::Preprocessor --no-wget
